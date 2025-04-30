@@ -125,7 +125,8 @@ int main ()
 		printf ("Escolha a opção desejada no menu:\n\n");
 		printf("\t1- Registrar nomes\n");
 		printf("\t2- consultar nomes\n");
-		printf("\t3- deletar nomes\n\n");
+		printf("\t3- deletar nomes\n");
+		printf("\t4- sair do programa\n\n");
 		printf("\t qual o opção que você deseja? ");
 
 		scanf ("%d",&opcao); // o & pode ser entendido como: armazene no endereço opcao
@@ -144,6 +145,11 @@ int main ()
 			
 			case 3:
 				deletar ();
+			break;
+			
+			case 4:
+				printf("Obrigado por ultilizar o sistema!");
+				return 0;
 			break;
 			
 			default:
