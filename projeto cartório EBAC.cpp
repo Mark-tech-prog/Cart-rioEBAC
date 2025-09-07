@@ -1,5 +1,5 @@
-#include <stdio.h> // biblioteca de texto (comunicação com o úsuario)
-#include <stdlib.h> // biblioteca que permite a ultilização de variaveis
+#include <stdio.h> // biblioteca de texto (comunicaÃ§Ã£o com o Ãºsuario)
+#include <stdlib.h> // biblioteca que permite a ultilizaÃ§Ã£o de variaveis
 #include <locale.h> // biblioteca que adapta o programa para o idioma ou local
 #include <string.h>// biblioteca responsavel por cuidar dos stings
 
@@ -14,14 +14,14 @@ int registro ()
 	printf ("Digite seu CPF: ");
 	scanf ("%s", cpf);
 	
-	strcpy(arquivo, cpf); // faz a cópia da ultima variavel para a primeira variavel
+	strcpy(arquivo, cpf); // faz a cÃ³pia da ultima variavel para a primeira variavel
 	
-	FILE *file; // FILE é uma função do sistema que serve para chamar um arquivo. E "file" é o arquivo que criamos
+	FILE *file; // FILE Ã© uma funÃ§Ã£o do sistema que serve para chamar um arquivo. E "file" Ã© o arquivo que criamos
 	file = fopen (arquivo, "w"); // fopen abri o o que colocamos dentro de "()". "w" cria o arquivo
 	fprintf (file, cpf); // fprintf salva no arquivo a variavel
 	fclose(file); // fecha o arquivo
 
-	file = fopen(arquivo, "a"); // "a" atualiza a informação
+	file = fopen(arquivo, "a"); // "a" atualiza a informaÃ§Ã£o
 	fprintf (file, ", ");
 	fclose(file);
 	
@@ -79,12 +79,12 @@ int consultar ()
 	
 	if (file == NULL)
 	{
-		printf ("não existe esse arquivo. \n");	
+		printf ("nÃ£o existe esse arquivo. \n");	
 	}
 
-	while(fgets(conteudo, 200, file) != NULL)// while(enquanto)(fgets(busca no arquivo)(conteudo(variavel), 200(quantidade max. de variaveis), file (até o fim de file)) != (parar) NULL (quando for nulo))
+	while(fgets(conteudo, 200, file) != NULL)// while(enquanto)(fgets(busca no arquivo)(conteudo(variavel), 200(quantidade max. de variaveis), file (atÃ© o fim de file)) != (parar) NULL (quando for nulo))
 	{
-		printf("\nEssas são as informações do usuário: ");
+		printf("\nEssas sÃ£o as informaÃ§Ãµes do usuÃ¡rio: ");
 		printf("%s", conteudo);
 		printf ("\n\n");
 	}
@@ -111,27 +111,27 @@ int deletar ()
 
 int main ()
 {
-	int opcao = 0; //tipo de variavel e sua identificação
+	int opcao = 0; //tipo de variavel e sua identificaÃ§Ã£o
 	int loop = 1;
 	
-	for(loop=1; loop=1;) // não se coloca ;, pois não estamos executando um comando, mas sim, fazendo ele "pensar"
+	for(loop=1; loop=1;) // nÃ£o se coloca ;, pois nÃ£o estamos executando um comando, mas sim, fazendo ele "pensar"
 {
 	
 		system ("cls");
 		
-		setlocale (LC_ALL,"portuguese"); // LC_ALL -> é uma variavel para a localidade do sistema
+		setlocale (LC_ALL,"portuguese"); // LC_ALL -> Ã© uma variavel para a localidade do sistema
 	
-		printf ("Cartório da EBAC \n\n");
-		printf ("Escolha a opção desejada no menu:\n\n");
+		printf ("CartÃ³rio da EBAC \n\n");
+		printf ("Escolha a opÃ§Ã£o desejada no menu:\n\n");
 		printf("\t1- Registrar nomes\n");
 		printf("\t2- consultar nomes\n");
 		printf("\t3- deletar nomes\n");
 		printf("\t4- sair do programa\n\n");
-		printf("\t qual o opção que você deseja? ");
+		printf("\t qual o opÃ§Ã£o que vocÃª deseja? ");
 
-		scanf ("%d",&opcao); // o & pode ser entendido como: armazene no endereço opcao
+		scanf ("%d",&opcao); // o & pode ser entendido como: armazene no endereÃ§o opcao
 
-		system("cls");// system é algo que vai mexer algo no funcionamento do sistema. cls -> limpar a tela
+		system("cls");// system Ã© algo que vai mexer algo no funcionamento do sistema. cls -> limpar a tela
 
 		switch (opcao)
 		{
@@ -153,11 +153,9 @@ int main ()
 			break;
 			
 			default:
-					printf ("seu numero escolhido não está entre as opções do menu!\n ");
+					printf ("seu numero escolhido nÃ£o estÃ¡ entre as opÃ§Ãµes do menu!\n ");
 					system ("pause");
 		}
 
 	}
 }
-
-
